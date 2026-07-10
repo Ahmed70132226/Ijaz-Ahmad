@@ -1,0 +1,146 @@
+/* ============================================================
+   App-level layout overrides & section spacing
+   All design tokens are in index.css
+   ============================================================ */
+
+/* Typography reset for all headings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body, "Inter", sans-serif);
+  background: var(--bg-deep, #050a0f);
+  color: var(--text-primary, #f0f6ff);
+}
+
+/* Section border separators */
+section + section {
+  border-top: 1px solid var(--border-subtle, rgba(255,255,255,0.03));
+}
+
+/* Remove focus outline from non-keyboard interactions */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+/* Hardware acceleration for animated elements */
+.will-animate {
+  will-change: transform, opacity;
+}
+
+/* Prevent flash of unstyled content */
+.app-wrapper {
+  min-height: 100vh;
+  background: var(--bg-deep);
+}
+
+/* Nav height offset for anchor links */
+:target {
+  scroll-margin-top: 80px;
+}
+
+/* Smooth hover transitions for interactive cards */
+.project-card,
+.service-card,
+.certification-card,
+.education-card {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Blueprint grid animations */
+@keyframes grid-drift {
+  0% { background-position: 0 0; }
+  100% { background-position: 60px 60px; }
+}
+
+.blueprint-grid-animated {
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: grid-drift 20s linear infinite;
+}
+
+/* Glow pulse for active elements */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 transparent; }
+  50% { box-shadow: 0 0 20px var(--primary-glow); }
+}
+.glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* Text reveal clip-path animation */
+@keyframes clip-reveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0% 0 0); }
+}
+.clip-reveal {
+  animation: clip-reveal 0.8s var(--ease-out) forwards;
+}
+
+/* Floating animation for background elements */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-12px) rotate(2deg); }
+  66% { transform: translateY(6px) rotate(-1deg); }
+}
+.float-slow { animation: float-slow 8s ease-in-out infinite; }
+
+/* Loading spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.spin { animation: spin 0.8s linear infinite; }
+
+/* Gradient border animation */
+@keyframes border-spin {
+  to { --angle: 360deg; }
+}
+
+/* Typing animation */
+@keyframes type-cursor {
+  0%, 100% { border-right-color: var(--primary); }
+  50% { border-right-color: transparent; }
+}
+
+/* Experience timeline line */
+.timeline-line-animated {
+  animation: drawLine 1.5s ease-out forwards;
+}
+@keyframes drawLine {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+/* Section fade-up entrance (used by GSAP as initial state) */
+.fade-up-init {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Form input placeholder fix */
+input:placeholder-shown + label,
+textarea:placeholder-shown + label {
+  top: 1.1rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* Responsive grid utils */
+@media (max-width: 640px) {
+  .grid-2 { grid-template-columns: 1fr !important; }
+  .grid-3 { grid-template-columns: 1fr !important; }
+  .grid-4 { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 1024px) {
+  .grid-3 { grid-template-columns: repeat(2, 1fr) !important; }
+}
