@@ -121,7 +121,7 @@ function AnimatedFooter() {
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
               {[
-                { faIcon: "fab fa-linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/ijazahmad-20284922" },
+                { faIcon: "fab fa-linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/ijaz-ahmad-20284922/" },
                 { faIcon: "fas fa-envelope", label: "Email", href: "mailto:ijazgsk@yahoo.com" },
               ].map(({ faIcon, label, href }) => (
                 <a

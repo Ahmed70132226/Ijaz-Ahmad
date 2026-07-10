@@ -336,7 +336,7 @@ export const Hero = () => {
               Download Resume
             </a>
             <a
-              href="https://www.linkedin.com/in/ijazahmad-20284922"
+              href="https://www.linkedin.com/in/ijaz-ahmad-20284922/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline"
