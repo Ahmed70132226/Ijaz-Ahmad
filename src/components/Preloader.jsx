@@ -43,27 +43,27 @@ export function Preloader({ onComplete }) {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4 }}
           >
-            {/* M letter */}
+            {/* IA initials */}
             <motion.path
-              d="M10 62 L10 18 L28 44 L40 22 L52 44 L70 18 L70 62"
-              stroke="#00d4ff"
-              strokeWidth="3.5"
+              d="M22 22 L22 58 M40 58 L50 22 L60 58 M44 46 L56 46"
+              stroke="#05BFDB"
+              strokeWidth="4"
               strokeLinecap="round"
               strokeLinejoin="round"
               fill="none"
               initial={{ pathLength: 0, opacity: 0 }}
               animate={{ pathLength: 1, opacity: 1 }}
-              transition={{ duration: 1.2, ease: "easeInOut", delay: 0.2 }}
+              transition={{ duration: 1.4, ease: "easeInOut", delay: 0.2 }}
             />
-            {/* A accent dot */}
+            {/* Accent dot */}
             <motion.circle
-              cx="40"
-              cy="72"
-              r="3"
-              fill="#00d4ff"
+              cx="50"
+              cy="68"
+              r="3.5"
+              fill="#05BFDB"
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.3, delay: 1.1 }}
+              transition={{ duration: 0.3, delay: 1.3 }}
             />
           </motion.svg>
 
