@@ -18,6 +18,16 @@ export const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 960);
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((t) => (t === "light" ? "dark" : "light"));
+  };
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 960);
@@ -194,6 +204,36 @@ export const Navbar = () => {
             >
               Connect
             </motion.a>
+
+            {/* Theme Toggle Button */}
+            <motion.button
+              onClick={toggleTheme}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.78 }}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "36px",
+                height: "36px",
+                marginLeft: "0.5rem",
+                background: "var(--bg-card)",
+                border: "1px solid var(--border)",
+                borderRadius: "50%",
+                color: "var(--primary)",
+                cursor: "pointer",
+                transition: "all 0.2s ease",
+              }}
+              whileHover={{ scale: 1.1, background: "var(--primary-glow-sm)", borderColor: "var(--primary)" }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {theme === "light" ? (
+                <i className="fas fa-moon" style={{ fontSize: "14px" }} />
+              ) : (
+                <i className="fas fa-sun" style={{ fontSize: "14px" }} />
+              )}
+            </motion.button>
           </div>
         )}
 
@@ -287,6 +327,39 @@ export const Navbar = () => {
             >
               Connect
             </motion.a>
+
+            {/* Mobile Theme Toggle Button */}
+            <motion.button
+              onClick={toggleTheme}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: navLinks.length * 0.055 + 0.25 }}
+              style={{
+                marginTop: "1rem",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.5rem",
+                padding: "0.75rem 2.5rem",
+                background: "var(--bg-card)",
+                border: "1px solid var(--border)",
+                color: "var(--primary)",
+                borderRadius: "var(--radius-full)",
+                fontSize: "0.9rem",
+                fontWeight: 750,
+                cursor: "pointer",
+              }}
+            >
+              {theme === "light" ? (
+                <>
+                  <i className="fas fa-moon" /> Dark Mode
+                </>
+              ) : (
+                <>
+                  <i className="fas fa-sun" /> Light Mode
+                </>
+              )}
+            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>

@@ -6,12 +6,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 :root {
-  /* Brand */
+  /* LIGHT THEME (default) */
   --primary: #0A4D68;
   --primary-dark: #088395;
   --primary-dim: #05BFDB;
-  --primary-glow: rgba(5, 191, 219, 0.15);
-  --primary-glow-sm: rgba(5, 191, 219, 0.05);
+  --primary-glow: rgba(10, 77, 104, 0.15);
+  --primary-glow-sm: rgba(10, 77, 104, 0.06);
 
   /* Backgrounds */
   --bg-deep: #F8FAFC;
@@ -25,9 +25,9 @@
   --text-muted: #64748B;
 
   /* Borders */
-  --border: rgba(10, 77, 104, 0.15);
-  --border-hover: rgba(10, 77, 104, 0.35);
-  --border-subtle: rgba(10, 77, 104, 0.08);
+  --border: rgba(10, 77, 104, 0.12);
+  --border-hover: rgba(10, 77, 104, 0.3);
+  --border-subtle: rgba(10, 77, 104, 0.05);
 
   /* Glass */
   --glass: rgba(255, 255, 255, 0.85);
@@ -52,6 +52,31 @@
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
   --ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+  /* DARK THEME */
+  --primary: #05BFDB;
+  --primary-dark: #088395;
+  --primary-dim: #0A4D68;
+  --primary-glow: rgba(5, 191, 219, 0.2);
+  --primary-glow-sm: rgba(5, 191, 219, 0.08);
+
+  --bg-deep: #050b11;
+  --bg-surface: #0b131c;
+  --bg-card: #0f1a26;
+  --bg-card-hover: #162536;
+
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+
+  --border: rgba(5, 191, 219, 0.15);
+  --border-hover: rgba(5, 191, 219, 0.35);
+  --border-subtle: rgba(255, 255, 255, 0.03);
+
+  --glass: rgba(5, 11, 17, 0.85);
+  --glass-light: rgba(15, 26, 38, 0.6);
 }
 
 /* ============================================================ RESET */
