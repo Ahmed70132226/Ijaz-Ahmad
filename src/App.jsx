@@ -122,7 +122,8 @@ function AnimatedFooter() {
             <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
               {[
                 { faIcon: "fab fa-linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/ijaz-ahmad-20284922/" },
-                { faIcon: "fas fa-envelope", label: "Email", href: "mailto:ijazgsk@yahoo.com" },
+                { faIcon: "fas fa-envelope", label: "Official Email", href: "mailto:Ijaz.x.ahmad@haleon.com" },
+                { faIcon: "fas fa-envelope", label: "Personal Email", href: "mailto:ijazgsk@yahoo.com" },
               ].map(({ faIcon, label, href }) => (
                 <a
                   key={label}

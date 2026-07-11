@@ -117,8 +117,9 @@ export const Contact = () => {
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
               {[
                 { icon: Phone, label: "Phone", value: "+92 300 4307603", href: "tel:+923004307603" },
-                { icon: Mail, label: "Email", value: "ijazgsk@yahoo.com", href: "mailto:ijazgsk@yahoo.com" },
-                { icon: LinkedinIcon, label: "LinkedIn", value: "linkedin.com/in/ijazahmad-20284922", href: "https://linkedin.com/in/ijazahmad-20284922" },
+                { icon: Mail, label: "Official Email", value: "Ijaz.x.ahmad@haleon.com", href: "mailto:Ijaz.x.ahmad@haleon.com" },
+                { icon: Mail, label: "Personal Email", value: "ijazgsk@yahoo.com", href: "mailto:ijazgsk@yahoo.com" },
+                { icon: LinkedinIcon, label: "LinkedIn", value: "linkedin.com/in/ijazahmad-20284922", href: "https://www.linkedin.com/in/ijaz-ahmad-20284922/" },
                 { icon: MapPin, label: "Location", value: "Islamabad, Pakistan", href: null },
               ].map(({ icon: Icon, label, value, href }) => (
                 <div
