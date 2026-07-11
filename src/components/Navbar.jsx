@@ -270,15 +270,18 @@ export const Navbar = () => {
             style={{
               position: "fixed",
               inset: 0,
-              background: "rgba(5, 10, 15, 0.97)",
+              background: "var(--bg-deep)",
               backdropFilter: "blur(24px)",
               WebkitBackdropFilter: "blur(24px)",
-              zIndex: 999,
+              zIndex: 1001,
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              justifyContent: "center",
-              gap: "1.8rem",
+              justifyContent: "flex-start",
+              paddingTop: "90px",
+              paddingBottom: "30px",
+              gap: "1.2rem",
+              overflowY: "auto",
             }}
           >
             {navLinks.map((link, i) => (
@@ -288,19 +291,19 @@ export const Navbar = () => {
                 onClick={(e) => { e.preventDefault(); scrollTo(link.href); }}
                 initial={{ opacity: 0, y: 28 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.055 + 0.12 }}
+                transition={{ delay: i * 0.045 + 0.1 }}
                 style={{
                   fontFamily: "var(--font-display)",
-                  fontSize: "clamp(1.6rem, 6vw, 2.4rem)",
-                  fontWeight: 900,
+                  fontSize: "clamp(1.1rem, 4.5vw, 1.5rem)",
+                  fontWeight: 800,
                   textDecoration: "none",
-                  letterSpacing: "-0.02em",
+                  letterSpacing: "-0.01em",
                   color: activeSection === link.href.slice(1)
                     ? "var(--primary)"
                     : "var(--text-primary)",
                   transition: "color 0.2s ease",
                 }}
-                whileHover={{ x: 8, color: "var(--primary)" }}
+                whileHover={{ x: 6, color: "var(--primary)" }}
               >
                 {link.label}
               </motion.a>
