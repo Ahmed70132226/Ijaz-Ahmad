@@ -441,7 +441,7 @@ export const Hero = () => {
               boxShadow: "0 20px 50px rgba(10, 77, 104, 0.15)",
             }}>
               <img
-                src="/Ijaz Ahmed.png"
+                src="/Ijaz Ahmed.jpeg"
                 alt="Ijaz Ahmad — Senior Pharmaceutical Executive"
                 style={{
                   width: "100%",
