@@ -4,9 +4,9 @@ import CountUp from "react-countup";
 import { Award, Shield, BookOpen, BarChart } from "lucide-react";
 
 const STATS = [
-  { value: 30, label: "Years Experience", suffix: "+", icon: Award },
+  { value: 35, label: "Years Experience", suffix: "+", icon: Award },
   { value: 8, label: "Leadership Roles", suffix: "+", icon: Shield },
-  { value: 500, label: "Healthcare Professionals Managed", suffix: "+", icon: BarChart },
+  { value: 5000, label: "Healthcare Professionals Managed", suffix: "+", icon: BarChart },
   { value: 100, label: "Business Excellence Initiatives", suffix: "+", icon: BookOpen },
 ];
 
