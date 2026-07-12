@@ -16,7 +16,7 @@ const COMPETENCIES = [
 ];
 
 const HIGHLIGHTS = [
-  { title: "30+ Years in Healthcare Industry", desc: "Long-standing history driving sales excellence and customer engagement." },
+  { title: "35+ Years in Healthcare Industry", desc: "Long-standing history driving sales excellence and customer engagement." },
   { title: "Senior Leadership Positions", desc: "Successfully directed regional sales and detailing operations at Haleon and GSK." },
   { title: "Regional Business Management", desc: "Led teams and expansion initiatives across major business hubs in Pakistan." },
   { title: "National Product Launches", desc: "Successfully launched pediatric and adult vaccines for GSK and Sanofi Pasteur." },
