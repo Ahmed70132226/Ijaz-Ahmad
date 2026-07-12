@@ -74,7 +74,7 @@ const experiences = [
   },
   {
     company: "GlaxoSmithKline",
-    role: "Medical Representative Coordinator",
+    role: "Med E.Rep Coordinator",
     period: "2014 – 2016",
     location: "Pakistan",
     icon: ShieldCheck,
