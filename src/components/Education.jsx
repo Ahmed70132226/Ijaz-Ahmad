@@ -3,6 +3,26 @@ import { GraduationCap, BookOpen, MessageSquare, Quote } from "lucide-react";
 
 const education = [
   {
+    institution: "UCL School of Management",
+    location: "Executive Education / Haleon",
+    degree: "Executive Mini MBA in Deeper Human Understanding",
+    period: "October 2023",
+    icon: GraduationCap,
+    color: "var(--primary-dim)",
+    description: "Certified by University College School of Management for successful completion of the Haleon CBIA Academy Deeper Human Understanding training.",
+    highlights: ["Human Understanding", "Executive Education", "Haleon CBIA Academy", "Credential: 85626374"],
+  },
+  {
+    institution: "UCL School of Management",
+    location: "Executive Education / Haleon",
+    degree: "Executive Mini MBA in Digital Commerce",
+    period: "March 2023",
+    icon: GraduationCap,
+    color: "var(--primary-dark)",
+    description: "Certified by University College London School of Management for successful completion of the Haleon Digital Commerce Academy training.",
+    highlights: ["Digital Commerce", "E-Commerce Strategy", "Commercial Operations", "Credential: 70572718"],
+  },
+  {
     institution: "Preston University",
     location: "Pakistan",
     degree: "MBA — Marketing & Marketing Management",

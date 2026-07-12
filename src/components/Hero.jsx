@@ -558,7 +558,7 @@ export const Hero = () => {
             <span style={{ fontSize: "1.1rem" }}>🏆</span>
             <div>
               <div style={{ fontFamily: "var(--font-body)", fontWeight: 700, fontSize: "0.78rem", color: "var(--text-primary)" }}>
-                30+ Years Experience
+                35+ Years Experience
               </div>
               <div style={{ fontSize: "0.65rem", color: "var(--text-muted)" }}>Leadership & Growth</div>
             </div>
