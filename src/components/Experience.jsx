@@ -183,7 +183,7 @@ export const Experience = () => {
             Professional <span className="text-gradient">Experience</span>
           </h2>
           <p className="section-sub">
-            Over 30 years of dedicated leadership in sales operations, marketing, and detailing across leading multinational organizations.
+            Over 35 years of dedicated leadership in sales operations, marketing, and detailing across leading multinational organizations.
           </p>
         </motion.div>
 
